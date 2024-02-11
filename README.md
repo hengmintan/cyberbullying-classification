@@ -14,6 +14,22 @@ Data was split for 80% training and 20% testing. I implemented the scikit-learn 
 
 Below is the average compound sentiment score for each class of cyberbullying. The average scores are all negative, though to varying degrees. The scores for age, gender, and religion are similar, while ethnicity has the strongest negative sentiment. Both other_cyberbullying and not_cyberbullying have scores closer to 0, indicating that these messages are, on average, less negative than other types of cyberbullying.
 
+age: -0.35374030280280283
+ethnicity -0.6236070342921742
+gender -0.3010298883732597
+religion -0.3021480995248812
+other_cyberbullying -0.07116475776556308
+not_cyberbullying -0.046767589679043424
+
 The model achieved an overall accuracy of 74%. However, precision and recall were low for both other_cyberbullying and not_cyberbullying classes. The lower scores in other_cyberbullying and not_cyberbullying is likely due to the fact that the frequently used words in both classes are very similar and also appear in other cyberbullying classes, and can be easily confused for other classes. In the confusion matrix below, we can see that these classes are frequently predicted as other types of cyberbullying.
 
+![confusion matrix for cyberbullying classification model](./images/confusion_matrix.png)
+
 Displayed below are the generated word clouds for each cyberbullying class. Note that the words appearing in the word clouds for other_cyberbullying and not_cyberbullying are very similar.
+
+![word cloud: age](./images/word_cloud_age.png)
+![word cloud: age](./images/word_cloud_ethnicity.png)
+![word cloud: age](./images/word_cloud_gender.png)
+![word cloud: age](./images/word_cloud_religion.png)
+![word cloud: age](./images/word_cloud_other_cyberbullying.png)
+![word cloud: age](./images/word_cloud_not_cyberbullying.png)
