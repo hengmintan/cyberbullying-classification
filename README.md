@@ -26,7 +26,7 @@ Below is the average compound sentiment score for each class of cyberbullying. T
 The model achieved an overall accuracy of 74%. However, precision and recall were low for both other_cyberbullying and not_cyberbullying classes.
 
 | class | precision | recall | f1-score | support |
-| --- | --- |
+| --- | --- | --- | --- | --- |
 | age | 0.75 | 0.99 | 0.85 | 1603 |
 | ethnicity | 0.86 | 0.90 | 0.87 | 1603 |
 | gender | 0.79 | 0.84 | 0.81 | 1531 |
