@@ -14,7 +14,7 @@ Data was split for 80% training and 20% testing. I implemented the scikit-learn 
 
 Below is the average compound sentiment score for each class of cyberbullying. The average scores are all negative, though to varying degrees. The scores for age, gender, and religion are similar, while ethnicity has the strongest negative sentiment. Both other_cyberbullying and not_cyberbullying have scores closer to 0, indicating that these messages are, on average, less negative than other types of cyberbullying.
 
-| Class | Sentiment Score |
+| class | sentiment score |
 | --- | --- |
 | age | -0.35374030280280283 |
 | ethnicity | -0.6236070342921742 |
@@ -23,7 +23,18 @@ Below is the average compound sentiment score for each class of cyberbullying. T
 | other_cyberbullying | -0.07116475776556308 |
 | not_cyberbullying | -0.046767589679043424 |
 
-The model achieved an overall accuracy of 74%. However, precision and recall were low for both other_cyberbullying and not_cyberbullying classes. The lower scores in other_cyberbullying and not_cyberbullying is likely due to the fact that the frequently used words in both classes are very similar and also appear in other cyberbullying classes, and can be easily confused for other classes. In the confusion matrix below, we can see that these classes are frequently predicted as other types of cyberbullying.
+The model achieved an overall accuracy of 74%. However, precision and recall were low for both other_cyberbullying and not_cyberbullying classes.
+
+| class | precision | recall | f1-score | support |
+| --- | --- |
+| age | 0.75 | 0.99 | 0.85 | 1603 |
+| ethnicity | 0.86 | 0.90 | 0.87 | 1603 |
+| gender | 0.79 | 0.84 | 0.81 | 1531 |
+| religion | 0.79 | 0.98 | 0.87 | 1566 |
+| other_cyberbullying | 0.56 | 0.35 | 0.43 | 1612 |
+| not_cyberbullying | 0.57 | 0.41 | 0.48 | 1624 |
+
+The lower scores in other_cyberbullying and not_cyberbullying is likely due to the fact that the frequently used words in both classes are very similar and also appear in other cyberbullying classes, and can be easily confused for other classes. In the confusion matrix below, we can see that these classes are frequently predicted as other types of cyberbullying.
 
 ![confusion matrix for cyberbullying classification model](./images/confusion_matrix.png)
 
